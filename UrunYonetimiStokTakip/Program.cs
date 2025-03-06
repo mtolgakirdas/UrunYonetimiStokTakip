@@ -16,7 +16,7 @@ namespace UrunYonetimiStokTakip
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MarkaYonetimi());
+            Application.Run(new Urunyonetimi());
         }
     }
 }

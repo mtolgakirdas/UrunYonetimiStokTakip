@@ -36,6 +36,7 @@
             this.kullanıcıYöneyimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblİd = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
-            this.lblİd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarkalar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -74,6 +74,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1110, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // kategoriYönetimiToolStripMenuItem
             // 
@@ -124,6 +125,16 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marka Yönetim";
+            // 
+            // lblİd
+            // 
+            this.lblİd.AutoSize = true;
+            this.lblİd.Location = new System.Drawing.Point(383, 170);
+            this.lblİd.Name = "lblİd";
+            this.lblİd.Size = new System.Drawing.Size(13, 13);
+            this.lblİd.TabIndex = 23;
+            this.lblİd.Text = "0";
+            this.lblİd.Visible = false;
             // 
             // label7
             // 
@@ -215,16 +226,6 @@
             this.lblTarih.Size = new System.Drawing.Size(77, 13);
             this.lblTarih.TabIndex = 6;
             this.lblTarih.Text = "Eklenme Tarihi";
-            // 
-            // lblİd
-            // 
-            this.lblİd.AutoSize = true;
-            this.lblİd.Location = new System.Drawing.Point(383, 170);
-            this.lblİd.Name = "lblİd";
-            this.lblİd.Size = new System.Drawing.Size(13, 13);
-            this.lblİd.TabIndex = 23;
-            this.lblİd.Text = "0";
-            this.lblİd.Visible = false;
             // 
             // MarkaYonetimi
             // 

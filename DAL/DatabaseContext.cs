@@ -20,6 +20,7 @@ namespace DAL
         public virtual DbSet<Marka> Markalar { get; set; }
         public virtual DbSet<Urun> Urunler { get; set; }
         public virtual DbSet<Musteri> Musteriler { get; set; }
+        public virtual DbSet<Siparis> Siparisler { get; set; }
 
 
 
@@ -55,6 +56,13 @@ namespace DAL
         }
 
     }
-    
-
 }
+/*
+ * Migratioon iþlemleri ile veritabýnýný silmeden tablolarý güncelleyebilir veya tabloda class larda yaptýðýmýz deðiþikleri kullanarak güncelleme yapabiliyoruz.
+ * MÝGRATÝONU AKTÝF ETMEK ÝÇÝN YAPILACAKLAR
+ * 1-Öncelikle pmc package manager console kapalý ise onu Vs nun üst menüsünden aktif ediyoruz.pmc ile komutlar kullanarak paket yükleme(Entity framework vb),
+ * migration iþlemler vb yapabilmek için
+ * 2-pmc ekranýnda komut çalýþtýracaðýmýz projeyi(DAL katmaný)default project alanýndan seçiyoruz.EF'nin bu katmanda yüklü olmasý gerekir
+ * 3-Komut satýrýna enable-migration komutunu yazýp çalýþtýrýyoruz ve DAL katmanýnda Migrations klasörü içerisindeki classlar oluþmasý lazým.
+ *  iþlem baþarýlý ise, iþlem baþarýsýz olursa 
+ */

@@ -58,6 +58,10 @@
     <Compile Include="Migrations\202501171454339_InitialCreate.Designer.cs">
       <DependentUpon>202501171454339_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202501271434535_SiparisTablosuEklendi.cs" />
+    <Compile Include="Migrations\202501271434535_SiparisTablosuEklendi.Designer.cs">
+      <DependentUpon>202501271434535_SiparisTablosuEklendi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202501171454339_InitialCreate.resx">
       <DependentUpon>202501171454339_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501271434535_SiparisTablosuEklendi.resx">
+      <DependentUpon>202501271434535_SiparisTablosuEklendi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

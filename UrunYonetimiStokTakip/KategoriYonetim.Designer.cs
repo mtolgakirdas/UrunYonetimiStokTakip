@@ -38,16 +38,18 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvKategoriler = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.cbDurum = new System.Windows.Forms.CheckBox();
+            this.txtKategoriAciklama = new System.Windows.Forms.TextBox();
+            this.txtKategoriAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtKategoriAdi = new System.Windows.Forms.TextBox();
-            this.cbDurum = new System.Windows.Forms.CheckBox();
-            this.btnEkle = new System.Windows.Forms.Button();
-            this.BtnGuncelle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.txtKategoriAcıklama = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.LblEklenmeTarihi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategoriler)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -104,20 +106,24 @@
             // 
             // dgvKategoriler
             // 
+            this.dgvKategoriler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKategoriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKategoriler.Location = new System.Drawing.Point(12, 37);
             this.dgvKategoriler.Name = "dgvKategoriler";
             this.dgvKategoriler.Size = new System.Drawing.Size(533, 568);
             this.dgvKategoriler.TabIndex = 2;
+            this.dgvKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKategoriler_CellClick_1);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.LblEklenmeTarihi);
+            this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnSil);
             this.groupBox1.Controls.Add(this.BtnGuncelle);
             this.groupBox1.Controls.Add(this.btnEkle);
             this.groupBox1.Controls.Add(this.cbDurum);
-            this.groupBox1.Controls.Add(this.txtKategoriAcıklama);
+            this.groupBox1.Controls.Add(this.txtKategoriAciklama);
             this.groupBox1.Controls.Add(this.txtKategoriAdi);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
@@ -128,6 +134,70 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kategori Yönetim";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(35, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Aktif/Pasif";
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(288, 234);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 13;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Location = new System.Drawing.Point(181, 234);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuncelle.TabIndex = 12;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.Location = new System.Drawing.Point(70, 234);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle.TabIndex = 11;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
+            // cbDurum
+            // 
+            this.cbDurum.AutoSize = true;
+            this.cbDurum.Location = new System.Drawing.Point(166, 115);
+            this.cbDurum.Name = "cbDurum";
+            this.cbDurum.Size = new System.Drawing.Size(57, 17);
+            this.cbDurum.TabIndex = 10;
+            this.cbDurum.Text = "Durum";
+            this.cbDurum.UseVisualStyleBackColor = true;
+            // 
+            // txtKategoriAciklama
+            // 
+            this.txtKategoriAciklama.Location = new System.Drawing.Point(166, 72);
+            this.txtKategoriAciklama.Multiline = true;
+            this.txtKategoriAciklama.Name = "txtKategoriAciklama";
+            this.txtKategoriAciklama.Size = new System.Drawing.Size(145, 20);
+            this.txtKategoriAciklama.TabIndex = 9;
+            // 
+            // txtKategoriAdi
+            // 
+            this.txtKategoriAdi.Location = new System.Drawing.Point(166, 32);
+            this.txtKategoriAdi.Name = "txtKategoriAdi";
+            this.txtKategoriAdi.Size = new System.Drawing.Size(145, 20);
+            this.txtKategoriAdi.TabIndex = 7;
             // 
             // label1
             // 
@@ -156,66 +226,23 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Eklenme Tarihi";
             // 
-            // txtKategoriAdi
+            // lblId
             // 
-            this.txtKategoriAdi.Location = new System.Drawing.Point(166, 32);
-            this.txtKategoriAdi.Name = "txtKategoriAdi";
-            this.txtKategoriAdi.Size = new System.Drawing.Size(145, 20);
-            this.txtKategoriAdi.TabIndex = 7;
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(382, 181);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(13, 13);
+            this.lblId.TabIndex = 23;
+            this.lblId.Text = "0";
+            this.lblId.Visible = false;
             // 
-            // cbDurum
+            // LblEklenmeTarihi
             // 
-            this.cbDurum.AutoSize = true;
-            this.cbDurum.Location = new System.Drawing.Point(166, 115);
-            this.cbDurum.Name = "cbDurum";
-            this.cbDurum.Size = new System.Drawing.Size(57, 17);
-            this.cbDurum.TabIndex = 10;
-            this.cbDurum.Text = "Durum";
-            this.cbDurum.UseVisualStyleBackColor = true;
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.Location = new System.Drawing.Point(70, 234);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(75, 23);
-            this.btnEkle.TabIndex = 11;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(166, 234);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(75, 23);
-            this.BtnGuncelle.TabIndex = 12;
-            this.BtnGuncelle.Text = "Güncelle";
-            this.BtnGuncelle.UseVisualStyleBackColor = true;
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(295, 234);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 23);
-            this.btnSil.TabIndex = 13;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            // 
-            // txtKategoriAcıklama
-            // 
-            this.txtKategoriAcıklama.Location = new System.Drawing.Point(166, 72);
-            this.txtKategoriAcıklama.Multiline = true;
-            this.txtKategoriAcıklama.Name = "txtKategoriAcıklama";
-            this.txtKategoriAcıklama.Size = new System.Drawing.Size(145, 20);
-            this.txtKategoriAcıklama.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 119);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Aktif/Pasif";
+            this.LblEklenmeTarihi.AutoSize = true;
+            this.LblEklenmeTarihi.Location = new System.Drawing.Point(179, 163);
+            this.LblEklenmeTarihi.Name = "LblEklenmeTarihi";
+            this.LblEklenmeTarihi.Size = new System.Drawing.Size(0, 13);
+            this.LblEklenmeTarihi.TabIndex = 24;
             // 
             // KategoriYonetim
             // 
@@ -228,6 +255,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "KategoriYonetim";
             this.Text = "KategoriYonetim";
+            this.Load += new System.EventHandler(this.KategoriYonetim_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategoriler)).EndInit();
@@ -257,7 +285,9 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.TextBox txtKategoriAcıklama;
+        private System.Windows.Forms.TextBox txtKategoriAciklama;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label LblEklenmeTarihi;
     }
 }

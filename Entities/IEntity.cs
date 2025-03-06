@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    internal interface IEntity//interface sınıfı bütün sınıflarda olacak.
+    public interface IEntity//interface sınıfı bütün sınıflarda olacak.
     {
          int Id { get; set; }
 

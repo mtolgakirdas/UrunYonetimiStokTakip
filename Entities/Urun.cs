@@ -19,6 +19,7 @@ namespace Entities
         public int KDV { get; set; }
         public int StokMiktari { get; set; }
         public int Iskonto{ get; set; }
+        public decimal ToptanFiyat { get; set; }
 
 
 

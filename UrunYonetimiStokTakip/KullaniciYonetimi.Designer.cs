@@ -36,6 +36,13 @@
             this.kullanıcıYöneyimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.txtadi = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Ad = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
@@ -45,12 +52,7 @@
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Ad = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -58,11 +60,13 @@
             // 
             // dgvKullanicilar
             // 
+            this.dgvKullanicilar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKullanicilar.Location = new System.Drawing.Point(0, 27);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
             this.dgvKullanicilar.Size = new System.Drawing.Size(621, 629);
             this.dgvKullanicilar.TabIndex = 8;
+            this.dgvKullanicilar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanicilar_CellClick);
             // 
             // menuStrip1
             // 
@@ -104,7 +108,6 @@
             this.kullanıcıYöneyimiToolStripMenuItem.Name = "kullanıcıYöneyimiToolStripMenuItem";
             this.kullanıcıYöneyimiToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
             this.kullanıcıYöneyimiToolStripMenuItem.Text = "Kullanıcı Yönetiimi";
-            
             // 
             // çıkışToolStripMenuItem
             // 
@@ -114,8 +117,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblId);
+            this.groupBox1.Controls.Add(this.txtSoyad);
+            this.groupBox1.Controls.Add(this.txtadi);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.Ad);
@@ -135,6 +140,67 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kulanıcı Bilgileri";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(388, 291);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(13, 13);
+            this.lblId.TabIndex = 29;
+            this.lblId.Text = "0";
+            this.lblId.Click += new System.EventHandler(this.lblId_Click);
+            // 
+            // txtSoyad
+            // 
+            this.txtSoyad.Location = new System.Drawing.Point(147, 221);
+            this.txtSoyad.Multiline = true;
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(145, 20);
+            this.txtSoyad.TabIndex = 28;
+            // 
+            // txtadi
+            // 
+            this.txtadi.Location = new System.Drawing.Point(147, 173);
+            this.txtadi.Multiline = true;
+            this.txtadi.Name = "txtadi";
+            this.txtadi.Size = new System.Drawing.Size(145, 20);
+            this.txtadi.TabIndex = 27;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(147, 126);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(145, 20);
+            this.txtEmail.TabIndex = 26;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(35, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Soyad";
+            // 
+            // Ad
+            // 
+            this.Ad.AutoSize = true;
+            this.Ad.Location = new System.Drawing.Point(35, 180);
+            this.Ad.Name = "Ad";
+            this.Ad.Size = new System.Drawing.Size(20, 13);
+            this.Ad.TabIndex = 24;
+            this.Ad.Text = "Ad";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Email";
             // 
             // label7
             // 
@@ -218,56 +284,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Şifre";
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Email";
-            // 
-            // Ad
-            // 
-            this.Ad.AutoSize = true;
-            this.Ad.Location = new System.Drawing.Point(35, 180);
-            this.Ad.Name = "Ad";
-            this.Ad.Size = new System.Drawing.Size(20, 13);
-            this.Ad.TabIndex = 24;
-            this.Ad.Text = "Ad";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 224);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Soyad";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(147, 126);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(145, 20);
-            this.txtEmail.TabIndex = 26;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(147, 173);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 27;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(147, 221);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 28;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(282, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 14);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "*ZORUNLU ALANLARDIR HEPSİNİ DOLDURUNUZ.";
             // 
             // KullaniciYonetimi
             // 
@@ -308,11 +333,13 @@
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.TextBox txtadi;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Ad;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label label3;
     }
 }

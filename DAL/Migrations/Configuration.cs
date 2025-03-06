@@ -1,5 +1,6 @@
 ﻿namespace DAL.Migrations
 {
+    using Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -9,16 +10,28 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;//veritabanı değişikleirini otomatik olarak uygula.
+            AutomaticMigrationDataLossAllowed = true;//Olası veri kayıplarını kabul ediyorum.
             ContextKey = "DAL.DatabaseContext";
         }
 
         protected override void Seed(DAL.DatabaseContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            if (!context.Kullanicilar.Any())
+            {
+                context.Kullanicilar.Add(
+                    new Kullanici()
+                    {
+                        Aktif = true,
+                        KullaniciAdi = "Admin",
+                        Sifre = "12345"
+                    }
+                    );
+                context.SaveChanges();
+            }
+            base.Seed(context);
+        } //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
-        }
+            
     }
 }
