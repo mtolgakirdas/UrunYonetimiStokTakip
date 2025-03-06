@@ -27,6 +27,7 @@ namespace UrunYonetimiStokTakip
             txtadi.Text = string.Empty;
             txtSoyad.Text = string.Empty;
             cbDurum.Checked = false;
+            
         }
         private void KullaniciYonetimi_Load(object sender, EventArgs e)
         {

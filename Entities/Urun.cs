@@ -12,7 +12,7 @@ namespace Entities
         public int KategoriId { get; set; }
         public int MarkaId { get; set; }
         public string UrunAdi { get; set; }
-        public string UrunAcıklama { get; set; }
+        public string UrunAciklama { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public bool Aktif { get; set; }
         public decimal UrunFiyati { get; set; }
