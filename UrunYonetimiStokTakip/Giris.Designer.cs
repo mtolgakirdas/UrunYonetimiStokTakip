@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,14 +52,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanıcı Grişi";
             // 
-            // label1
+            // btnGiris
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kullanıcı Adı";
+            this.btnGiris.Location = new System.Drawing.Point(156, 161);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.Size = new System.Drawing.Size(118, 55);
+            this.btnGiris.TabIndex = 1;
+            this.btnGiris.Text = "Giriş Yap";
+            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(147, 83);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
+            this.txtSifre.Size = new System.Drawing.Size(206, 20);
+            this.txtSifre.TabIndex = 3;
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(147, 51);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(206, 20);
+            this.txtKullaniciAdi.TabIndex = 2;
             // 
             // label2
             // 
@@ -71,29 +87,14 @@
             this.label2.Text = "Şifre";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtKullaniciAdi
+            // label1
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(147, 51);
-            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(206, 20);
-            this.txtKullaniciAdi.TabIndex = 2;
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(147, 83);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(206, 20);
-            this.txtSifre.TabIndex = 3;
-            // 
-            // btnGiris
-            // 
-            this.btnGiris.Location = new System.Drawing.Point(156, 161);
-            this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(118, 55);
-            this.btnGiris.TabIndex = 1;
-            this.btnGiris.Text = "Giriş Yap";
-            this.btnGiris.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Kullanıcı Adı";
             // 
             // Giris
             // 
@@ -104,6 +105,7 @@
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris";
+            this.Load += new System.EventHandler(this.Giris_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

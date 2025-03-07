@@ -42,7 +42,7 @@ namespace UrunYonetimiStokTakip
                     new Kullanici
                     {
                         
-                        KullaniciAdi = txtEmail.Text,
+                        KullaniciAdi = txtKullaniciAdi.Text,
                         Sifre = txtSifre.Text,
                         Email = txtEmail.Text,
                         Adi = txtadi.Text,
@@ -132,22 +132,6 @@ namespace UrunYonetimiStokTakip
                 MessageBox.Show("Hata Oluştu Kayıt Silinemedi!\\n Kayıt Seçiniz.");
             }
         }
-
-        private void kategoriYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void markaYonetimiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ürünYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvKullanicilar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -160,23 +144,45 @@ namespace UrunYonetimiStokTakip
                 txtSoyad.Text = dgvKullanicilar.CurrentRow.Cells[5].Value.ToString();
                 cbDurum.Checked = Convert.ToBoolean(dgvKullanicilar.CurrentRow.Cells[6].Value);
 
-                
-                
+
+
             }
             catch (Exception)
             {
 
                 MessageBox.Show("Kayıtlarda Hata Oluştu \\nBoş Alan Bırakmayınız.");
             }
-          
+        }
 
+        private void kategoriYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KategoriYonetim kategoriYonetim = new KategoriYonetim();
+            this.Close();
+            kategoriYonetim.ShowDialog();
+        }
 
+        private void markaYonetimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MarkaYonetimi markaYonetimi = new MarkaYonetimi();
+            this.Close();
+            markaYonetimi.ShowDialog();
+        }
 
+        private void ürünYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Urunyonetimi urunyonetimi = new Urunyonetimi();
+            this.Close();
+            urunyonetimi.ShowDialog();
         }
 
         private void lblId_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

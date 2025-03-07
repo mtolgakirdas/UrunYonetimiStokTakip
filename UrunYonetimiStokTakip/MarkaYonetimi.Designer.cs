@@ -81,6 +81,7 @@
             this.kategoriYönetimiToolStripMenuItem.Name = "kategoriYönetimiToolStripMenuItem";
             this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.kategoriYönetimiToolStripMenuItem.Text = "Kategori Yönetimi";
+            this.kategoriYönetimiToolStripMenuItem.Click += new System.EventHandler(this.kategoriYönetimiToolStripMenuItem_Click);
             // 
             // markaYonetimiToolStripMenuItem
             // 
@@ -93,18 +94,21 @@
             this.ürünYönetimiToolStripMenuItem.Name = "ürünYönetimiToolStripMenuItem";
             this.ürünYönetimiToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.ürünYönetimiToolStripMenuItem.Text = "Ürün Yönetimi";
+            this.ürünYönetimiToolStripMenuItem.Click += new System.EventHandler(this.ürünYönetimiToolStripMenuItem_Click);
             // 
             // kullanıcıYöneyimiToolStripMenuItem
             // 
             this.kullanıcıYöneyimiToolStripMenuItem.Name = "kullanıcıYöneyimiToolStripMenuItem";
             this.kullanıcıYöneyimiToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
             this.kullanıcıYöneyimiToolStripMenuItem.Text = "Kullanıcı Yönetiimi";
+            this.kullanıcıYöneyimiToolStripMenuItem.Click += new System.EventHandler(this.kullanıcıYöneyimiToolStripMenuItem_Click);
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
             this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
+            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
             // groupBox1
             // 

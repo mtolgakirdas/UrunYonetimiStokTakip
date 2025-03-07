@@ -38,6 +38,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvKategoriler = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LblEklenmeTarihi = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSil = new System.Windows.Forms.Button();
             this.BtnGuncelle = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
-            this.LblEklenmeTarihi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategoriler)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -80,24 +80,28 @@
             this.markaYönetimiToolStripMenuItem.Name = "markaYönetimiToolStripMenuItem";
             this.markaYönetimiToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.markaYönetimiToolStripMenuItem.Text = "Marka Yönetimi";
+            this.markaYönetimiToolStripMenuItem.Click += new System.EventHandler(this.markaYönetimiToolStripMenuItem_Click);
             // 
             // ürünYönetimiToolStripMenuItem
             // 
             this.ürünYönetimiToolStripMenuItem.Name = "ürünYönetimiToolStripMenuItem";
             this.ürünYönetimiToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.ürünYönetimiToolStripMenuItem.Text = "Ürün Yönetimi";
+            this.ürünYönetimiToolStripMenuItem.Click += new System.EventHandler(this.ürünYönetimiToolStripMenuItem_Click);
             // 
             // kullanıcıYönetimiToolStripMenuItem
             // 
             this.kullanıcıYönetimiToolStripMenuItem.Name = "kullanıcıYönetimiToolStripMenuItem";
             this.kullanıcıYönetimiToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
             this.kullanıcıYönetimiToolStripMenuItem.Text = "Kullanıcı Yönetimi";
+            this.kullanıcıYönetimiToolStripMenuItem.Click += new System.EventHandler(this.kullanıcıYönetimiToolStripMenuItem_Click);
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
             this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
+            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -134,6 +138,24 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kategori Yönetim";
+            // 
+            // LblEklenmeTarihi
+            // 
+            this.LblEklenmeTarihi.AutoSize = true;
+            this.LblEklenmeTarihi.Location = new System.Drawing.Point(179, 163);
+            this.LblEklenmeTarihi.Name = "LblEklenmeTarihi";
+            this.LblEklenmeTarihi.Size = new System.Drawing.Size(0, 13);
+            this.LblEklenmeTarihi.TabIndex = 24;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(382, 181);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(13, 13);
+            this.lblId.TabIndex = 23;
+            this.lblId.Text = "0";
+            this.lblId.Visible = false;
             // 
             // label7
             // 
@@ -225,24 +247,6 @@
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Eklenme Tarihi";
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(382, 181);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(13, 13);
-            this.lblId.TabIndex = 23;
-            this.lblId.Text = "0";
-            this.lblId.Visible = false;
-            // 
-            // LblEklenmeTarihi
-            // 
-            this.LblEklenmeTarihi.AutoSize = true;
-            this.LblEklenmeTarihi.Location = new System.Drawing.Point(179, 163);
-            this.LblEklenmeTarihi.Name = "LblEklenmeTarihi";
-            this.LblEklenmeTarihi.Size = new System.Drawing.Size(0, 13);
-            this.LblEklenmeTarihi.TabIndex = 24;
             // 
             // KategoriYonetim
             // 

@@ -36,6 +36,7 @@
             this.kullanıcıYöneyimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtadi = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -114,6 +114,7 @@
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
             this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
+            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -140,6 +141,16 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kulanıcı Bilgileri";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(282, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 14);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "*ZORUNLU ALANLARDIR HEPSİNİ DOLDURUNUZ.";
             // 
             // lblId
             // 
@@ -283,16 +294,6 @@
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Şifre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(282, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 14);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "*ZORUNLU ALANLARDIR HEPSİNİ DOLDURUNUZ.";
             // 
             // KullaniciYonetimi
             // 
